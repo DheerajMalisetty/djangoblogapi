@@ -6,9 +6,9 @@ from posts.views import post_delete
 from posts.views import post_update
 
 urlpatterns = [
-    url(r'^detail/$',post_detail,name="detail"),
+    url(r'^detail/(?P<id>\d+)/$',post_detail,name="detail"),
     url(r'^create/$',post_create,name="create"),
     url(r'^list/$',post_list,name="list"),
     url(r'^delete/$',post_delete,name="delete"),
-    url(r'^delete/$',post_update,name="update"),
+    url(r'^update/$',post_update,name="update"),
 ]
