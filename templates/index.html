@@ -5,10 +5,10 @@
     <title>Hello</title>
 </head>
 <body>
-    <h1>{{ title }} is working.</h1>
+    <h1>{{ title }}</h1>
     {% for object in object_list %}
 
-        {{ object.title }}<br>
+        <a href={{ object.get_absolute_url }}>{{ object.title }}</a><br>
         {{ object.content }}<br>
         {{ object.timestamp }}<br>
         {{ object.updated }}<br>
